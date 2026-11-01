@@ -1,9 +1,16 @@
 import { Game } from "./game.js";
 import { InputController } from "./input.js";
+import { setStorageWarningHandler } from "./storage.js";
 
 // Elementos principales que vienen desde index.html.
 const canvas = document.querySelector("#game-canvas");
 const portfolioLink = document.querySelector("#portfolio-link");
+const storageNotice = document.querySelector("#storage-notice");
+
+setStorageWarningHandler(() => {
+  storageNotice.hidden = false;
+  storageNotice.textContent = "No se puede acceder al almacenamiento del navegador. Tu mejor puntaje se conserva solo en esta sesión y se pierde al recargar o cerrar esta página.";
+});
 
 // Referencias del HUD y pantallas flotantes que Game va actualizando.
 const ui = {

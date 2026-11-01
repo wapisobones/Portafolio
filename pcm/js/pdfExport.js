@@ -143,7 +143,7 @@
         `${piece.width} mm`,
         `${piece.height} mm`,
         String(piece.quantity),
-        piece.canRotate ? "Si" : "No",
+        piece.canRotate ? "Sí" : "No",
         getGrainLabel(piece.grain),
         status.unplaced > 0 ? `${status.placed}/${piece.quantity} ubicadas` : "Ubicada"
       ];
@@ -175,7 +175,7 @@
 
     doc.setFontSize(10);
     doc.setFont("helvetica", "normal");
-    doc.text(`Fecha de generacion: ${generatedAt.toLocaleString()}`, 210, 16);
+    doc.text(`Fecha de generación: ${generatedAt.toLocaleString()}`, 210, 16);
 
     const nextY = writeKeyValues(doc, 14, 28, [
       ["Material", boardConfig.material || "Sin material"],
@@ -187,9 +187,9 @@
       ["Ubicadas", placedCount],
       ["No ubicadas", unplacedCount],
       ["Aprovechamiento", formatPercent(layoutResult.usagePercent)],
-      ["Perdida", formatPercent(layoutResult.wastePercent)],
-      ["Area usada", formatArea(layoutResult.usedArea)],
-      ["Area total", formatArea(layoutResult.boardArea)]
+      ["Pérdida", formatPercent(layoutResult.wastePercent)],
+      ["Área usada", formatArea(layoutResult.usedArea)],
+      ["Área total", formatArea(layoutResult.boardArea)]
     ]);
 
     const imageBox = fitImage(svgElement, 14, nextY + 2, 268, 72);

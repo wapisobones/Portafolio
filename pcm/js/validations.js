@@ -21,7 +21,7 @@
     }
 
     if (!["horizontal", "vertical"].includes(sheet.grainDirection || sheet.vetaPlancha || "horizontal")) {
-      errors.push("La direccion de veta de la plancha no es valida.");
+      errors.push("La dirección de veta de la plancha no es válida.");
     }
 
     return errors;
@@ -40,11 +40,11 @@
     }
 
     if (!Number.isInteger(piece.quantity) || piece.quantity <= 0) {
-      errors.push("La cantidad debe ser un numero entero mayor a cero.");
+      errors.push("La cantidad debe ser un número entero mayor a cero.");
     }
 
     if (!["indiferente", "horizontal", "vertical"].includes(piece.grain || piece.veta || "indiferente")) {
-      errors.push("La direccion de veta de la pieza no es valida.");
+      errors.push("La dirección de veta de la pieza no es válida.");
     }
 
     return errors;

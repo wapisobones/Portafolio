@@ -26,7 +26,7 @@ Luego visita `http://localhost:8000`.
 
 ## Controles
 
-- PC: barra espaciadora, flecha arriba o clic.
+- PC: barra espaciadora, flecha arriba o clic. Cuando el foco está en un botón, enlace o campo, se conserva su interacción nativa.
 - Celular: toque en pantalla.
 - El personaje puede hacer doble salto.
 - Al superar obstaculos se carga la barra de poder.
@@ -43,7 +43,7 @@ Luego visita `http://localhost:8000`.
 - Obstaculo simple con variantes de roca y trampa.
 - Colisiones y Game Over.
 - Puntaje actual.
-- Mejor puntaje guardado en localStorage.
+- Mejor puntaje guardado en localStorage. Si el navegador bloquea su lectura o escritura, se muestra un aviso y el puntaje se conserva solo en memoria hasta recargar o cerrar la página.
 - Reinicio de partida.
 - Cuenta regresiva inicial.
 - Boton temporal para volver al portafolio.

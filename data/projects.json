@@ -60,7 +60,7 @@
       "SQL Server"
     ],
     "imagen": "assets/images/jobfinder-demo.png",
-    "imagenAlt": "Portada provisional de JobFinder AI. Captura de la demo pendiente.",
+    "imagenAlt": "Dashboard ficticio de JobFinder AI con ofertas guardadas, interés y seguimiento de postulaciones.",
     "demoUrl": "demos/jobfinder/",
     "demoTexto": "Explorar demo",
     "codigoUrl": "",

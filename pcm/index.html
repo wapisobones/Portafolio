@@ -46,7 +46,7 @@
           </div>
 
           <div class="field">
-            <label for="sheetGrain">Direccion de veta de la plancha</label>
+            <label for="sheetGrain">Dirección de veta de la plancha</label>
             <select id="sheetGrain">
               <option value="horizontal">Horizontal</option>
               <option value="vertical">Vertical</option>
@@ -59,7 +59,7 @@
         <section class="panel" aria-labelledby="pieceFormTitle">
           <div class="panel-heading">
             <h2 id="pieceFormTitle">Pieza</h2>
-            <button id="cancelEditButton" class="button button-ghost is-hidden" type="button">Cancelar edicion</button>
+            <button id="cancelEditButton" class="button button-ghost is-hidden" type="button">Cancelar edición</button>
           </div>
 
           <form id="pieceForm" class="piece-form">
@@ -87,12 +87,12 @@
               </div>
               <label class="check-field">
                 <input id="pieceCanRotate" type="checkbox" checked>
-                <span>Permitir rotacion</span>
+                <span>Permitir rotación</span>
               </label>
             </div>
 
             <div class="field">
-              <label for="pieceGrain">Direccion de veta de la pieza</label>
+              <label for="pieceGrain">Dirección de veta de la pieza</label>
               <select id="pieceGrain">
                 <option value="indiferente">Indiferente</option>
                 <option value="horizontal">Horizontal</option>
@@ -106,9 +106,10 @@
 
         <section class="panel" aria-labelledby="storageTitle">
           <h2 id="storageTitle">Proyecto local</h2>
+          <p id="storageNotice" role="status" hidden></p>
           <div class="button-row">
             <button id="saveProjectButton" class="button" type="button">Guardar proyecto</button>
-            <button id="loadProjectButton" class="button button-secondary" type="button">Cargar ultimo</button>
+            <button id="loadProjectButton" class="button button-secondary" type="button">Cargar último</button>
             <button id="clearProjectButton" class="button button-danger" type="button">Limpiar proyecto</button>
           </div>
         </section>
@@ -121,15 +122,15 @@
           <div class="panel-heading">
             <div>
               <h2 id="boardTitle">Plano visual</h2>
-              <p id="boardSubtitle">Agrega piezas para calcular la distribucion.</p>
+              <p id="boardSubtitle">Agrega piezas para calcular la distribución.</p>
             </div>
             <div class="toolbar-actions">
-              <button id="calculateButton" class="button" type="button">Calcular distribucion</button>
+              <button id="calculateButton" class="button" type="button">Calcular distribución</button>
               <button id="exportPdfButton" class="button button-secondary" type="button">Exportar PDF</button>
             </div>
           </div>
           <div id="boardCanvas" class="board-canvas" aria-live="polite">
-            <p class="empty-state">El plano aparecera aqui despues de calcular.</p>
+            <p class="empty-state">El plano aparecerá aquí después de calcular.</p>
           </div>
         </section>
 
@@ -147,7 +148,7 @@
                   <th>Ancho</th>
                   <th>Alto</th>
                   <th>Cant.</th>
-                  <th>Rotacion</th>
+                  <th>Rotación</th>
                   <th>Veta</th>
                   <th>Acciones</th>
                 </tr>
@@ -159,7 +160,7 @@
 
         <section id="unplacedPanel" class="panel warning-panel is-hidden" aria-labelledby="unplacedTitle">
           <h2 id="unplacedTitle">Piezas no ubicadas</h2>
-          <p>Algunas piezas no caben en la plancha con la configuracion actual.</p>
+          <p>Algunas piezas no caben en la plancha con la configuración actual.</p>
           <ul id="unplacedList"></ul>
         </section>
       </section>

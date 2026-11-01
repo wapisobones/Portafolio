@@ -98,11 +98,9 @@ Para recorrerla localmente, iniciar el servidor indicado arriba y abrir
 http://localhost:5500/demos/canchatrack/. El funcionamiento se documenta en
 [demos/canchatrack/README.md](demos/canchatrack/README.md).
 
-**Portada provisional, revisión pendiente antes de publicar:** se conserva
-`assets/images/dashboard_canchaTrack.png`. No se ha generado una captura nueva
-de la demo ni se ha verificado que la imagen actual carezca de información real.
-No debe considerarse anonimizada ni aprobada para publicación. Revisar su
-contenido o reemplazarla por una captura comprobada de la demo con datos ficticios.
+**Captura definitiva:** la tarjeta utiliza `assets/images/canchatrack-demo.png`,
+una captura de la demo estática con datos ficticios y su aviso visible.
+La captura antigua fue eliminada.
 
 ## Demo de JobFinder AI
 
@@ -120,15 +118,11 @@ Con el servidor estático iniciado, abrir http://localhost:5500/demos/jobfinder/
 El recorrido se documenta en [README de JobFinder AI](demos/jobfinder/README.md).
 Las rutas relativas permiten publicar bajo `/Portafolio/` en GitHub Pages.
 
-**Imagen definitiva pendiente:** no existe una captura de JobFinder AI entre los
-archivos disponibles. Se utiliza `assets/images/jobfinder-demo-placeholder.svg`,
-identificada visualmente como «Portada provisional», con texto alternativo que
-indica la captura pendiente. Es una ilustración, no una captura de la aplicación,
-y no muestra datos personales ni ofertas. `verImagen: false` evita presentar
-la ilustración mediante una acción «Ver captura».
-
-Cuando exista una captura real de la demo, comprobar que solo contiene datos
-ficticios y actualizar su referencia y texto alternativo en `data/projects.json`.
+**Captura definitiva:** la tarjeta utiliza `assets/images/jobfinder-demo.png`,
+una captura del Dashboard de la demo con datos ficticios. Su aviso identifica
+los resultados de IA como ilustrativos; no se ejecuta IA. El texto alternativo
+describe el Dashboard y sus indicadores. Se conserva `verImagen: false`:
+la imagen aparece en la tarjeta sin una acción adicional «Ver captura».
 
 ## Como modificar datos de contacto
 

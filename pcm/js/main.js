@@ -1,6 +1,6 @@
 (function () {
   // main.js coordina la interfaz: lee formularios, actualiza estado, calcula y renderiza.
-  const { saveProject, loadProject, clearProject } = window.PCMStorage;
+  const { saveProject, loadProject, clearProject, isStorageAvailable } = window.PCMStorage;
   const { normalizePiece, duplicatePiece } = window.PCMPieces;
   const { validatePiece, validateProject } = window.PCMValidations;
   const { createLayout } = window.PCMCuttingAlgorithm;
@@ -30,6 +30,7 @@
     sheetGrain: document.querySelector("#sheetGrain"),
     validationMessages: document.querySelector("#validationMessages"),
     saveStatus: document.querySelector("#saveStatus"),
+    storageNotice: document.querySelector("#storageNotice"),
     pieceForm: document.querySelector("#pieceForm"),
     pieceId: document.querySelector("#pieceId"),
     pieceName: document.querySelector("#pieceName"),
@@ -82,9 +83,17 @@
   // Mantiene el estado sincronizado cuando cambian los campos de plancha.
   function syncSheet() {
     state.sheet = getSheetFromForm();
-    state.lastLayout = null;
+    invalidateLayout();
     renderSummary();
     markUnsaved();
+  }
+
+  // Retira todos los resultados que ya no corresponden al proyecto actual.
+  function invalidateLayout() {
+    state.lastLayout = null;
+    elements.boardCanvas.innerHTML = '<p class="empty-state">Calcula la distribución para ver el plano actualizado.</p>';
+    elements.boardSubtitle.textContent = "Cálculo pendiente. Recalcula después de cambiar los datos.";
+    renderUnplaced();
   }
 
   function formatArea(area) {
@@ -119,9 +128,9 @@
       createSummaryItem("Piezas ubicadas", String(placedCount)),
       createSummaryItem("Piezas no ubicadas", String(unplacedCount), unplacedCount > 0 ? "fail" : ""),
       createSummaryItem("Aprovechamiento", layout ? formatPercent(layout.usagePercent) : "0.0%"),
-      createSummaryItem("Perdida", layout ? formatPercent(layout.wastePercent) : "0.0%"),
-      createSummaryItem("Area usada", layout ? formatArea(layout.usedArea || layout.areaUsed) : formatArea(0)),
-      createSummaryItem("Area plancha", formatArea(layout ? layout.boardArea || layout.totalArea : totalArea))
+      createSummaryItem("Pérdida", layout ? formatPercent(layout.wastePercent) : "0.0%"),
+      createSummaryItem("Área usada", layout ? formatArea(layout.usedArea || layout.areaUsed) : formatArea(0)),
+      createSummaryItem("Área plancha", formatArea(layout ? layout.boardArea || layout.totalArea : totalArea))
     ];
 
     elements.summaryCards.replaceChildren(...cards);
@@ -168,7 +177,7 @@
       widthCell.textContent = `${piece.width} mm`;
       heightCell.textContent = `${piece.height} mm`;
       quantityCell.textContent = String(piece.quantity);
-      rotationCell.textContent = piece.canRotate ? "Si" : "No";
+      rotationCell.textContent = piece.canRotate ? "Sí" : "No";
       grainCell.textContent = getGrainLabel(piece.grain);
       actions.className = "table-actions";
       actions.append(
@@ -295,7 +304,7 @@
       const piece = state.pieces.find((item) => item.id === id);
       if (piece) {
         state.pieces.push(duplicatePiece(piece));
-        state.lastLayout = null;
+        invalidateLayout();
         renderPiecesTable();
         renderSummary();
         markUnsaved();
@@ -304,7 +313,7 @@
 
     if (action === "delete") {
       state.pieces = state.pieces.filter((item) => item.id !== id);
-      state.lastLayout = null;
+      invalidateLayout();
       renderPiecesTable();
       renderSummary();
       markUnsaved();
@@ -328,9 +337,9 @@
     renderBoard(elements.boardCanvas, state.sheet, state.lastLayout);
     renderUnplaced();
     if (state.lastLayout.fitsAll) {
-      elements.boardSubtitle.textContent = `${state.sheet.material} - ${state.sheet.width} x ${state.sheet.height} mm - distribucion calculada con espacios libres.`;
+      elements.boardSubtitle.textContent = `${state.sheet.material} - ${state.sheet.width} x ${state.sheet.height} mm - distribución calculada con espacios libres.`;
     } else {
-      elements.boardSubtitle.textContent = "Algunas piezas no caben en la plancha con la configuracion actual.";
+      elements.boardSubtitle.textContent = "Algunas piezas no caben en la plancha con la configuración actual.";
     }
   }
 
@@ -353,7 +362,7 @@
     }
 
     if (!state.lastLayout || !exportPlanToPdf) {
-      showMessages(["No se pudo iniciar la exportacion PDF. Revisa que jsPDF este cargado."], "warning");
+      showMessages(["No se pudo iniciar la exportación PDF. Revisa que jsPDF esté cargado."], "warning");
       return;
     }
 
@@ -384,15 +393,21 @@
       sheet: state.sheet,
       pieces: state.pieces
     });
-    elements.saveStatus.textContent = "Proyecto guardado localmente";
+    updateStorageNotice();
+    elements.saveStatus.textContent = isStorageAvailable()
+      ? "Proyecto guardado localmente"
+      : "Proyecto guardado solo en memoria durante esta sesión";
   }
 
   // Carga el ultimo proyecto guardado en localStorage.
   function loadSavedProject() {
     const saved = loadProject();
+    updateStorageNotice();
 
     if (!saved) {
-      showMessages(["No hay un proyecto local guardado."], "warning");
+      showMessages([isStorageAvailable()
+        ? "No hay un proyecto local guardado."
+        : "No hay un proyecto guardado en memoria durante esta sesión."], "warning");
       return;
     }
 
@@ -403,28 +418,39 @@
       lastLayout: null
     };
     renderAll();
-    elements.saveStatus.textContent = "Ultimo proyecto cargado";
+    elements.saveStatus.textContent = isStorageAvailable()
+      ? "Último proyecto cargado"
+      : "Proyecto de esta sesión cargado";
   }
 
   // Limpia estado de pantalla y tambien borra el proyecto persistido.
   function clearCurrentProject() {
-    state = clone(DEFAULT_STATE);
+    if (!window.confirm("¿Limpiar el proyecto? Se eliminarán las piezas, el plano actual y el proyecto guardado en este navegador. Esta acción no se puede deshacer.")) {
+      return;
+    }
     clearProject();
+    state = clone(DEFAULT_STATE);
     renderAll();
-    elements.boardCanvas.innerHTML = '<p class="empty-state">El plano aparecera aqui despues de calcular.</p>';
-    elements.saveStatus.textContent = "Proyecto local limpiado";
+    updateStorageNotice();
+    elements.saveStatus.textContent = isStorageAvailable()
+      ? "Proyecto local limpiado"
+      : "Proyecto de esta sesión limpiado; no se pudo confirmar el borrado del almacenamiento del navegador.";
   }
 
   // Limpia unicamente la lista de piezas del proyecto actual.
   function clearPieces() {
     state.pieces = [];
-    state.lastLayout = null;
+    invalidateLayout();
     resetPieceForm();
     renderPiecesTable();
     renderSummary();
-    renderUnplaced();
-    elements.boardCanvas.innerHTML = '<p class="empty-state">El plano aparecera aqui despues de calcular.</p>';
     markUnsaved();
+  }
+
+  function updateStorageNotice() {
+    elements.storageNotice.hidden = isStorageAvailable();
+    elements.storageNotice.textContent = isStorageAvailable() ? ""
+      : "No se puede acceder al almacenamiento del navegador. Los cambios se conservan solo en memoria y se pierden al recargar o cerrar esta página.";
   }
 
   // Marca visualmente que hay cambios que aun no se han guardado en localStorage.
@@ -442,9 +468,8 @@
     resetPieceForm();
     clearMessages();
     renderPiecesTable();
+    invalidateLayout();
     renderSummary();
-    renderUnplaced();
-    elements.boardSubtitle.textContent = "Agrega piezas para calcular la distribucion.";
   }
 
   // Agrupa todos los eventos de usuario de la aplicacion.
@@ -488,5 +513,6 @@
   }
 
   renderAll();
+  updateStorageNotice();
   bindEvents();
 })();

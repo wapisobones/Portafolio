@@ -20,6 +20,13 @@ export class InputController {
       return;
     }
 
+    // Deja que los controles enfocados conserven su interacción nativa.
+    if (event.defaultPrevented || event.ctrlKey || event.altKey || event.metaKey
+      || event.target?.isContentEditable
+      || event.target?.closest?.("button, a[href], input, select, textarea, summary, [contenteditable]:not([contenteditable='false']), [role='button'], [role='link']")) {
+      return;
+    }
+
     event.preventDefault();
     this.emitJump();
   }

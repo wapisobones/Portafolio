@@ -218,7 +218,7 @@
           ...piece,
           grain,
           reason: blockedByGrain
-            ? "La pieza no cabe respetando la direccion de veta."
+            ? "La pieza no cabe respetando la dirección de veta."
             : "La pieza no cabe en los espacios libres disponibles."
         });
         return;

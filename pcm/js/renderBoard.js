@@ -75,7 +75,7 @@
       rect.setAttribute("fill", piece.color || "#5eead4");
 
       const title = createSvgElement("title");
-      title.textContent = `${pieceName}: ${piece.width} x ${piece.height} mm. Rotada: ${piece.rotated ? "si" : "no"}. Veta: ${grain}. Original: ${piece.originalWidth || piece.width} x ${piece.originalHeight || piece.height} mm`;
+      title.textContent = `${pieceName}: ${piece.width} x ${piece.height} mm. Rotada: ${piece.rotated ? "sí" : "no"}. Veta: ${grain}. Original: ${piece.originalWidth || piece.width} x ${piece.originalHeight || piece.height} mm`;
       rect.appendChild(title);
 
       label.classList.add("piece-text");
