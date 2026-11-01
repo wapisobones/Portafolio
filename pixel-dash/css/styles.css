@@ -73,6 +73,7 @@ button:active,
 }
 
 .game-panel {
+  min-width: 0;
   width: min(1040px, 100%);
 }
 
@@ -171,6 +172,8 @@ h1 {
 
 .canvas-wrap {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   background: #101629;
   border: 4px solid var(--line);
   box-shadow: 8px 8px 0 #0f0d17;
@@ -180,15 +183,21 @@ h1 {
 
 canvas {
   display: block;
+  grid-area: 1 / 1;
+  min-width: 0;
   width: 100%;
   aspect-ratio: 16 / 7;
   image-rendering: pixelated;
 }
 
 .overlay {
-  position: absolute;
-  inset: 0;
+  /* Comparte la celda del canvas y aporta altura para no recortar acciones. */
+  position: relative;
+  grid-area: 1 / 1;
+  z-index: 1;
+  min-width: 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   place-content: center;
   justify-items: center;
   gap: 14px;
@@ -217,6 +226,7 @@ canvas {
 .countdown {
   position: absolute;
   inset: 0;
+  z-index: 2;
   display: grid;
   place-items: center;
   background: rgba(17, 15, 27, 0.42);
@@ -289,5 +299,16 @@ canvas {
 
   canvas {
     aspect-ratio: 4 / 3;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .button-row > * {
+    max-width: 100%;
+    text-align: center;
   }
 }

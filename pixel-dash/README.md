@@ -27,7 +27,7 @@ Luego visita `http://localhost:8000`.
 ## Controles
 
 - PC: barra espaciadora, flecha arriba o clic. Cuando el foco está en un botón, enlace o campo, se conserva su interacción nativa.
-- Celular: toque en pantalla.
+- Celular: toque en pantalla. En Game Over, «Reiniciar» y «Volver al portafolio» se apilan en pantallas estrechas; la página permite desplazarse verticalmente si hace falta.
 - El personaje puede hacer doble salto.
 - Al superar obstaculos se carga la barra de poder.
 - Con la barra llena, despues del doble salto puedes activar un dash hacia adelante que consume toda la carga.
