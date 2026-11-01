@@ -40,6 +40,43 @@
     ]
   },
   {
+    "id": "jobfinder-ai",
+    "nombre": "JobFinder AI",
+    "descripcion": "MVP fullstack para revisar el perfil profesional, organizar ofertas laborales y dar seguimiento a postulaciones. Demo estática interactiva independiente con datos ficticios y compatibilidades ilustrativas precargadas; no ejecuta IA.",
+    "estado": "MVP",
+    "tipo": "Hobby",
+    "categorias": [
+      "Web",
+      "Sistema",
+      "Fullstack",
+      "MVP",
+      "Hobby"
+    ],
+    "tecnologias": [
+      "React",
+      "TypeScript",
+      "ASP.NET Core 10",
+      "Entity Framework Core",
+      "SQL Server"
+    ],
+    "imagen": "assets/images/jobfinder-demo.png",
+    "imagenAlt": "Portada provisional de JobFinder AI. Captura de la demo pendiente.",
+    "demoUrl": "demos/jobfinder/",
+    "demoTexto": "Explorar demo",
+    "codigoUrl": "",
+    "confidencial": false,
+    "notaConfidencialidad": "",
+    "rol": "Diseño y desarrollo fullstack del MVP",
+    "verImagen": false,
+    "tecnologiasPrincipales": [
+      "React",
+      "TypeScript",
+      "ASP.NET Core 10",
+      "EF Core",
+      "SQL Server"
+    ]
+  },
+  {
     "id": "pixel-dash",
     "nombre": "Pixel Dash",
     "descripcion": "Juego estilo dinosaurio de Chrome desarrollado como proyecto personal.",

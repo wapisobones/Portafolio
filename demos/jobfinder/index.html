@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101715">
+  <meta name="description" content="Demo independiente de JobFinder AI con perfil, ofertas y resultados ilustrativos totalmente ficticios.">
+  <title>JobFinder AI | Demo interactiva</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="demo-banner">Demo interactiva · Datos ficticios · Resultados de IA ilustrativos</div>
+  <header class="app-header">
+    <a class="brand" href="#dashboard">
+      <span class="brand-symbol" aria-hidden="true"></span>
+      <span>JobFinder AI<small>Demo independiente</small></span>
+    </a>
+    <a href="../../index.html#proyectos" class="return-link">Volver al portafolio</a>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <nav class="main-nav" aria-label="Navegación de JobFinder AI">
+        <a href="#dashboard" aria-current="page">Dashboard</a>
+        <a href="#mi-cv">Mi CV</a>
+        <a href="#empleos">Empleos</a>
+        <a href="#postulaciones">Mis postulaciones</a>
+      </nav>
+      <div class="sidebar-note">
+        <strong>Espacio de demostración</strong>
+        <p>Un perfil inventado y oportunidades ficticias para recorrer la interfaz.</p>
+        <p>Revisa el perfil ficticio, organiza ofertas y registra seguimientos simulados. Todo se conserva solo en memoria.</p>
+      </div>
+    </aside>
+    <main id="contenido" class="workspace" tabindex="-1">
+      <div class="load-notice">
+        <p id="app-status" role="status" aria-live="polite" aria-atomic="true">Cargando el conjunto ficticio…</p>
+        <button id="reload-demo" type="button" hidden>Recargar demo</button>
+        <button id="reset-demo" type="button" disabled>Restablecer demo</button>
+      </div>
+      <div id="view-content" aria-busy="true">
+        <h1 tabindex="-1">Preparando la demo</h1>
+        <p>Se están cargando los datos locales y la primera vista.</p>
+      </div>
+      <noscript><p class="notice">Activa JavaScript y abre la demo mediante un servidor HTTP para recorrer las vistas.</p></noscript>
+    </main>
+  </div>
+  <dialog id="reset-demo-dialog" class="reset-dialog" aria-labelledby="reset-demo-title" aria-describedby="reset-demo-description">
+    <h2 id="reset-demo-title">¿Restablecer la demo?</h2>
+    <p id="reset-demo-description">Se recuperarán el perfil y los registros ficticios iniciales. Se eliminarán los cambios, la actividad de sesión, los filtros y los borradores. Esta acción solo afecta a esta demo en memoria.</p>
+    <div class="dialog-actions">
+      <button id="cancel-reset-demo" type="button" autofocus>Cancelar</button>
+      <button id="confirm-reset-demo" type="button">Confirmar restablecimiento</button>
+    </div>
+  </dialog>
+  <footer class="app-footer">
+    <p>Original: React, TypeScript, ASP.NET Core 10, EF Core y SQL Server.</p>
+    <p>Demo: HTML, CSS y JavaScript. Sin envío de datos ni ejecución de IA.</p>
+  </footer>
+</body>
+</html>

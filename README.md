@@ -104,6 +104,32 @@ de la demo ni se ha verificado que la imagen actual carezca de información real
 No debe considerarse anonimizada ni aprobada para publicación. Revisar su
 contenido o reemplazarla por una captura comprobada de la demo con datos ficticios.
 
+## Demo de JobFinder AI
+
+La ficha presenta el MVP original fullstack: React, TypeScript, ASP.NET Core 10,
+EF Core y SQL Server, con aporte de diseño y desarrollo fullstack. La descripción
+distingue la demostración estática interactiva independiente, que usa únicamente
+datos ficticios y compatibilidades ilustrativas precargadas; no ejecuta IA.
+
+La acción **Explorar demo** reutiliza `demoUrl` y `demoTexto` y enlaza a
+`demos/jobfinder/`. La ficha aparece en Todos, Personales, Web y Sistemas.
+El estado MVP se muestra con la etiqueta genérica existente, sin cambiar el
+renderizador ni equipararlo automáticamente a «En desarrollo».
+
+Con el servidor estático iniciado, abrir http://localhost:5500/demos/jobfinder/.
+El recorrido se documenta en [README de JobFinder AI](demos/jobfinder/README.md).
+Las rutas relativas permiten publicar bajo `/Portafolio/` en GitHub Pages.
+
+**Imagen definitiva pendiente:** no existe una captura de JobFinder AI entre los
+archivos disponibles. Se utiliza `assets/images/jobfinder-demo-placeholder.svg`,
+identificada visualmente como «Portada provisional», con texto alternativo que
+indica la captura pendiente. Es una ilustración, no una captura de la aplicación,
+y no muestra datos personales ni ofertas. `verImagen: false` evita presentar
+la ilustración mediante una acción «Ver captura».
+
+Cuando exista una captura real de la demo, comprobar que solo contiene datos
+ficticios y actualizar su referencia y texto alternativo en `data/projects.json`.
+
 ## Como modificar datos de contacto
 
 Los datos placeholder estan en `index.html`, seccion `#contacto`:
