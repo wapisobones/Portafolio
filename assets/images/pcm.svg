@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Preview PCM Plano Corte Madera</title>
+  <desc id="desc">Vista previa de una herramienta para calcular cortes de madera.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#151d35"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0v28" fill="none" stroke="#4fd1c5" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <rect x="48" y="44" width="1104" height="80" rx="8" fill="#10172a" stroke="#2b3c5d"/>
+  <text x="78" y="77" fill="#4fd1c5" font-family="Consolas, monospace" font-size="18" font-weight="700">PCM</text>
+  <text x="78" y="106" fill="#eef4ff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Plano Corte Madera</text>
+  <rect x="894" y="66" width="190" height="38" rx="8" fill="rgba(255,255,255,.06)" stroke="#4fd1c5"/>
+  <text x="932" y="91" fill="#4fd1c5" font-family="Arial, sans-serif" font-size="17" font-weight="700">Ver portafolio</text>
+  <rect x="48" y="152" width="330" height="230" rx="8" fill="#151d35" stroke="#334464"/>
+  <text x="74" y="190" fill="#eef4ff" font-family="Arial, sans-serif" font-size="22" font-weight="700">Configuracion</text>
+  <text x="74" y="228" fill="#aab8d0" font-family="Arial, sans-serif" font-size="16">Medida predefinida</text>
+  <rect x="74" y="242" width="250" height="34" rx="6" fill="#0f172a" stroke="#4b5d7d"/>
+  <text x="90" y="265" fill="#eef4ff" font-family="Consolas, monospace" font-size="16">2440 x 1220 mm</text>
+  <text x="74" y="312" fill="#aab8d0" font-family="Arial, sans-serif" font-size="16">Espesor de corte</text>
+  <rect x="74" y="326" width="98" height="34" rx="6" fill="#0f172a" stroke="#4b5d7d"/>
+  <text x="106" y="349" fill="#eef4ff" font-family="Consolas, monospace" font-size="16">3</text>
+  <rect x="406" y="152" width="746" height="230" rx="8" fill="#151d35" stroke="#334464"/>
+  <text x="432" y="190" fill="#eef4ff" font-family="Arial, sans-serif" font-size="22" font-weight="700">Piezas</text>
+  <g font-family="Arial, sans-serif" font-size="15">
+    <text x="432" y="230" fill="#aab8d0">Nombre</text>
+    <text x="626" y="230" fill="#aab8d0">Ancho</text>
+    <text x="780" y="230" fill="#aab8d0">Alto</text>
+    <text x="920" y="230" fill="#aab8d0">Cant.</text>
+  </g>
+  <g fill="#0f172a" stroke="#4b5d7d">
+    <rect x="432" y="244" width="160" height="34" rx="6"/>
+    <rect x="626" y="244" width="120" height="34" rx="6"/>
+    <rect x="780" y="244" width="120" height="34" rx="6"/>
+    <rect x="920" y="244" width="80" height="34" rx="6"/>
+  </g>
+  <rect x="1024" y="244" width="90" height="34" rx="6" fill="#4fd1c5"/>
+  <text x="1040" y="267" fill="#061018" font-family="Arial, sans-serif" font-size="16" font-weight="700">Agregar</text>
+  <rect x="432" y="312" width="682" height="44" rx="6" fill="#11182d" stroke="#2b3c5d"/>
+  <text x="456" y="340" fill="#c7d3e7" font-family="Consolas, monospace" font-size="16">Lateral       45.5 cm       80 cm       2</text>
+  <rect x="48" y="410" width="1104" height="218" rx="8" fill="#151d35" stroke="#334464"/>
+  <text x="74" y="448" fill="#eef4ff" font-family="Arial, sans-serif" font-size="22" font-weight="700">Plano visual</text>
+  <rect x="274" y="456" width="660" height="132" fill="#ecdfc3" stroke="#9c7440" stroke-width="4"/>
+  <g stroke="#9c7440" stroke-opacity=".28">
+    <path d="M274 478h660M274 500h660M274 522h660M274 544h660M274 566h660"/>
+  </g>
+  <g>
+    <rect x="294" y="476" width="150" height="92" fill="#8ab6a6" stroke="#315f50" stroke-width="2"/>
+    <rect x="454" y="476" width="150" height="92" fill="#8ab6a6" stroke="#315f50" stroke-width="2"/>
+    <rect x="614" y="476" width="112" height="92" fill="#8ab6a6" stroke="#315f50" stroke-width="2"/>
+    <rect x="736" y="476" width="178" height="46" fill="#8ab6a6" stroke="#315f50" stroke-width="2"/>
+    <rect x="736" y="532" width="178" height="36" fill="#8ab6a6" stroke="#315f50" stroke-width="2"/>
+  </g>
+  <g fill="#12352c" font-family="Arial, sans-serif" font-size="15" font-weight="700">
+    <text x="338" y="526">Lateral</text>
+    <text x="498" y="526">Lateral</text>
+    <text x="642" y="526">Tapa</text>
+    <text x="788" y="506">Repisa</text>
+    <text x="780" y="556">Zocalo</text>
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pixel Dash, un runner 2D fantasy pixel art hecho con HTML Canvas."
+    />
+    <title>Pixel Dash</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="game-panel" aria-label="Pixel Dash">
+        <header class="game-header">
+          <div>
+            <p class="eyebrow">Fantasy runner</p>
+            <h1>Pixel Dash</h1>
+          </div>
+          <div class="hud" aria-label="Puntajes">
+            <span>Puntaje: <strong id="score">0</strong></span>
+            <span>Mejor: <strong id="best-score">0</strong></span>
+          </div>
+        </header>
+
+        <div class="power-meter" aria-label="Carga de poder">
+          <span>Poder</span>
+          <div class="power-track" aria-hidden="true">
+            <div id="power-fill" class="power-fill"></div>
+          </div>
+          <strong id="power-label">0%</strong>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas
+            id="game-canvas"
+            width="960"
+            height="420"
+            aria-label="Juego Pixel Dash"
+          ></canvas>
+
+          <div id="ready-panel" class="overlay">
+            <h2>Prepara el salto</h2>
+            <p>Espacio, flecha arriba, clic o toque para saltar. Puedes hacer doble salto y cargar un dash especial.</p>
+            <button id="start-button" type="button">Comenzar</button>
+          </div>
+
+          <div id="countdown" class="countdown" aria-live="polite" hidden>3</div>
+
+          <div id="game-over-panel" class="overlay" hidden>
+            <h2>Game Over</h2>
+            <p>Tu carrera termino, pero el mejor puntaje queda guardado.</p>
+            <div class="game-over-score">
+              <span>Puntaje</span>
+              <strong id="final-score">0</strong>
+            </div>
+            <div class="button-row">
+              <button id="restart-button" type="button">Reiniciar</button>
+              <a id="portfolio-link" class="button secondary" href="../index.html#proyectos" data-portfolio-url="../index.html#proyectos">
+                Volver al portafolio
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="credits">
+          <span>Assets: placeholders dibujados en Canvas. Carpetas locales listas en assets/.</span>
+        </footer>
+      </section>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Preview Pixel Dash</title>
+  <desc id="desc">Vista previa estilo pixel art del juego Pixel Dash.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#17233b"/>
+    </linearGradient>
+    <pattern id="scan" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M0 3h6" stroke="#ffffff" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#sky)"/>
+  <rect width="1200" height="675" fill="url(#scan)"/>
+  <rect x="24" y="24" width="1152" height="56" fill="#11182d" stroke="#5f8797" stroke-width="3"/>
+  <text x="52" y="60" fill="#f8f1d2" font-family="Consolas, monospace" font-size="32" font-weight="700">Pixel Dash</text>
+  <rect x="878" y="34" width="134" height="36" fill="#0b1020" stroke="#5f8797" stroke-width="2"/>
+  <text x="894" y="59" fill="#ffffff" font-family="Consolas, monospace" font-size="18">Puntaje: </text>
+  <text x="980" y="59" fill="#ffd166" font-family="Consolas, monospace" font-size="18" font-weight="700">17</text>
+  <rect x="1028" y="34" width="118" height="36" fill="#0b1020" stroke="#5f8797" stroke-width="2"/>
+  <text x="1044" y="59" fill="#ffffff" font-family="Consolas, monospace" font-size="18">Mejor: </text>
+  <text x="1110" y="59" fill="#ffd166" font-family="Consolas, monospace" font-size="18" font-weight="700">877</text>
+  <rect x="24" y="98" width="1152" height="38" fill="#11182d" stroke="#5f8797" stroke-width="3"/>
+  <text x="42" y="123" fill="#f8f1d2" font-family="Consolas, monospace" font-size="16">PODER</text>
+  <rect x="108" y="108" width="960" height="16" fill="#080d1c" stroke="#000814"/>
+  <text x="1138" y="123" fill="#ffd166" font-family="Consolas, monospace" font-size="16" font-weight="700">0%</text>
+  <rect x="24" y="152" width="1152" height="478" fill="#122039" stroke="#5f8797" stroke-width="4"/>
+  <g opacity=".45" fill="#173a55">
+    <path d="M24 505l50-28 66 30 105-40v124H24z"/>
+    <path d="M210 505l58-28 62 30 104-40v124H210z"/>
+    <path d="M424 505l64-28 65 30 110-40v124H424z"/>
+    <path d="M650 505l56-28 64 30 110-40v124H650z"/>
+    <path d="M854 505l64-28 62 30 110-40v124H854z"/>
+  </g>
+  <g fill="#e8f7ff">
+    <rect x="88" y="245" width="4" height="4"/>
+    <rect x="306" y="230" width="4" height="4"/>
+    <rect x="418" y="288" width="4" height="4"/>
+    <rect x="704" y="323" width="5" height="5"/>
+    <rect x="1070" y="272" width="5" height="5"/>
+    <rect x="1138" y="245" width="4" height="4"/>
+  </g>
+  <rect x="24" y="532" width="1152" height="18" fill="#7ad66d"/>
+  <path d="M24 526h1152v16H24z" fill="#9bea7d"/>
+  <g fill="#f8f1d2">
+    <rect x="34" y="520" width="5" height="18"/>
+    <rect x="58" y="520" width="5" height="18"/>
+    <rect x="82" y="520" width="5" height="18"/>
+    <rect x="106" y="520" width="5" height="18"/>
+    <rect x="130" y="520" width="5" height="18"/>
+    <rect x="154" y="520" width="5" height="18"/>
+    <rect x="178" y="520" width="5" height="18"/>
+    <rect x="202" y="520" width="5" height="18"/>
+  </g>
+  <rect x="24" y="550" width="1152" height="80" fill="#14391f"/>
+  <g fill="#0b2214">
+    <rect x="38" y="566" width="28" height="8"/>
+    <rect x="94" y="566" width="28" height="8"/>
+    <rect x="150" y="566" width="28" height="8"/>
+    <rect x="206" y="566" width="28" height="8"/>
+    <rect x="262" y="566" width="28" height="8"/>
+    <rect x="318" y="566" width="28" height="8"/>
+    <rect x="374" y="566" width="28" height="8"/>
+  </g>
+  <g transform="translate(164 474)">
+    <rect x="0" y="18" width="14" height="58" fill="#0c2a8a"/>
+    <rect x="14" y="0" width="28" height="18" fill="#2d67ff"/>
+    <rect x="10" y="18" width="52" height="16" fill="#1b45c0"/>
+    <rect x="18" y="34" width="24" height="38" fill="#f5d7aa"/>
+    <rect x="24" y="40" width="18" height="32" fill="#ffffff"/>
+    <rect x="6" y="12" width="52" height="8" fill="#0c2a8a"/>
+    <rect x="18" y="-6" width="22" height="8" fill="#2d67ff"/>
+    <rect x="-8" y="74" width="22" height="8" fill="#0c2a8a"/>
+    <rect x="36" y="74" width="22" height="8" fill="#0c2a8a"/>
+    <rect x="-6" y="24" width="10" height="10" fill="#ff9f1c"/>
+  </g>
+  <g transform="translate(970 482)">
+    <rect x="0" y="0" width="72" height="68" fill="#98a6b7"/>
+    <rect x="0" y="0" width="72" height="20" fill="#718093"/>
+    <rect x="24" y="24" width="14" height="14" fill="#5d697a"/>
+    <rect x="50" y="32" width="14" height="14" fill="#5d697a"/>
+  </g>
+</svg>

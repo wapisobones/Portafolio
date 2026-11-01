@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Preview SIPA</title>
+  <desc id="desc">Vista previa sanitizada de una pantalla profesional de recepcion y pesaje.</desc>
+  <defs>
+    <linearGradient id="sidebar" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#263342"/>
+      <stop offset="1" stop-color="#122131"/>
+    </linearGradient>
+    <pattern id="hex" width="48" height="42" patternUnits="userSpaceOnUse">
+      <path d="M24 1l20 11v22L24 45L4 34V12z" fill="none" stroke="#dce4ec" stroke-opacity=".22"/>
+    </pattern>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#16202c" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" rx="8" fill="#f7f8fa"/>
+  <rect x="200" width="1000" height="675" fill="url(#hex)"/>
+  <rect width="200" height="675" fill="url(#sidebar)"/>
+
+  <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".92">
+    <path d="M34 30h16M34 39h16M34 48h16"/>
+    <circle cx="76" cy="40" r="10" fill="#6b7a8b" stroke="none"/>
+  </g>
+
+  <rect x="14" y="72" width="182" height="40" rx="6" fill="#2d3d4f"/>
+  <rect x="14" y="72" width="5" height="40" rx="2" fill="#10b6ad"/>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#ffffff">
+    <text x="64" y="98" font-weight="700">Recepcion</text>
+    <text x="64" y="139">Despacho</text>
+    <text x="64" y="181">Mov. interno</text>
+    <text x="64" y="223">Otros pesajes</text>
+    <text x="64" y="280">Mantenedores</text>
+    <text x="64" y="322">Reportes</text>
+    <text x="64" y="364">Reportes producto</text>
+    <text x="64" y="406">Reportes auditoria</text>
+    <text x="64" y="448">Reportes errores</text>
+    <text x="64" y="490">Reportes generales</text>
+    <text x="64" y="532">Comunicaciones</text>
+    <text x="64" y="574">Parametros</text>
+    <text x="64" y="616">Cerrar sesion</text>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="2" opacity=".9">
+    <rect x="33" y="82" width="16" height="18" rx="2" stroke="#10d4c5"/>
+    <path d="M37 82v-5h8v5" stroke="#10d4c5"/>
+    <path d="M32 126h18v14H32zM35 126v-6h10v6"/>
+    <path d="M32 168h20M42 158v20M32 178l8-8l-8-8M52 158l-8 8l8 8"/>
+    <path d="M35 210h14v16H35zM39 210v-6h6v6"/>
+    <path d="M42 266l6 4v8l-6 4l-6-4v-8z"/>
+    <path d="M34 310h16v20H34zM38 316h8M38 322h8"/>
+    <path d="M34 352l8-5l8 5v10l-8 5l-8-5z"/>
+    <path d="M34 394c4-10 16-10 20 0M44 378a7 7 0 1 0 0 14a7 7 0 0 0 0-14"/>
+    <path d="M34 436h18M34 444h18M34 452h18"/>
+    <path d="M34 478h4v14h-4zM42 470h4v22h-4zM50 462h4v30h-4z"/>
+    <path d="M34 522h16a8 8 0 0 1 0 16H40l-6 6v-22z"/>
+    <path d="M34 562h18M38 554v16M48 554v16"/>
+    <path d="M35 604h14v20H35zM39 608h6M39 614h6"/>
+  </g>
+  <path d="M20 252h164M20 512h164" stroke="#ffffff" stroke-opacity=".18"/>
+
+  <g filter="url(#shadow)">
+    <rect x="218" y="52" width="958" height="570" rx="16" fill="#ffffff" stroke="#dce3eb"/>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="244" y="85" width="20" height="24" rx="3" fill="none" stroke="#10b6ad" stroke-width="2"/>
+    <path d="M249 85v-7h10v7" fill="none" stroke="#10b6ad" stroke-width="2"/>
+    <text x="280" y="104" fill="#1f2937" font-size="23" font-weight="700">Recepcion</text>
+  </g>
+
+  <g fill="#ffffff" stroke="#d9e0e8" filter="url(#shadow)">
+    <rect x="232" y="126" width="474" height="76" rx="7"/>
+    <rect x="718" y="126" width="292" height="76" rx="7"/>
+    <rect x="1022" y="126" width="144" height="246" rx="7"/>
+    <rect x="232" y="214" width="248" height="136" rx="7"/>
+    <rect x="492" y="214" width="216" height="136" rx="7"/>
+    <rect x="718" y="214" width="292" height="84" rx="7"/>
+    <rect x="718" y="310" width="292" height="224" rx="7"/>
+    <rect x="232" y="362" width="248" height="196" rx="7"/>
+    <rect x="492" y="362" width="216" height="196" rx="7"/>
+    <rect x="232" y="570" width="778" height="58" rx="7"/>
+    <rect x="1022" y="386" width="144" height="198" rx="7"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#344055">
+    <text x="244" y="153">Correlativo</text>
+    <text x="357" y="153">Patente</text>
+    <text x="474" y="153">Tolva</text>
+    <text x="584" y="153">Chofer</text>
+    <text x="244" y="244">Guia despacho</text>
+    <text x="360" y="244">Tipo de guia</text>
+    <text x="502" y="244">Orden compra</text>
+    <text x="244" y="396">Producto</text>
+    <text x="502" y="396">Peso</text>
+    <text x="730" y="244">Fecha y horas</text>
+    <text x="730" y="340">Lote</text>
+    <text x="838" y="340">Recargo</text>
+    <text x="928" y="340">Ultimo recargo</text>
+    <text x="1034" y="153">Peso actual</text>
+    <text x="1034" y="414">Clase</text>
+    <text x="1034" y="476">Descarga</text>
+  </g>
+
+  <g fill="#f9fafb" stroke="#d6dde6">
+    <rect x="244" y="162" width="100" height="28" rx="4"/>
+    <rect x="358" y="162" width="100" height="28" rx="4"/>
+    <rect x="472" y="162" width="100" height="28" rx="4"/>
+    <rect x="586" y="162" width="100" height="28" rx="4"/>
+    <rect x="244" y="254" width="102" height="28" rx="4"/>
+    <rect x="360" y="254" width="120" height="28" rx="4"/>
+    <rect x="502" y="254" width="192" height="28" rx="4"/>
+    <rect x="244" y="317" width="116" height="28" rx="4"/>
+    <rect x="502" y="317" width="192" height="28" rx="4"/>
+    <rect x="244" y="424" width="224" height="28" rx="4"/>
+    <rect x="244" y="482" width="58" height="26" rx="4"/>
+    <rect x="318" y="482" width="58" height="26" rx="4"/>
+    <rect x="394" y="482" width="72" height="26" rx="4"/>
+    <rect x="244" y="538" width="224" height="28" rx="4"/>
+    <rect x="730" y="264" width="92" height="28" rx="4"/>
+    <rect x="836" y="264" width="86" height="28" rx="4"/>
+    <rect x="936" y="264" width="64" height="28" rx="4"/>
+    <rect x="730" y="356" width="96" height="28" rx="4"/>
+    <rect x="838" y="356" width="78" height="28" rx="4"/>
+    <rect x="928" y="356" width="72" height="28" rx="4"/>
+    <rect x="730" y="416" width="270" height="28" rx="4"/>
+    <rect x="730" y="478" width="154" height="28" rx="4"/>
+    <rect x="894" y="478" width="106" height="28" rx="4"/>
+    <rect x="1034" y="430" width="120" height="28" rx="4"/>
+    <rect x="1034" y="492" width="120" height="28" rx="4"/>
+    <rect x="1034" y="552" width="120" height="28" rx="4"/>
+  </g>
+
+  <g fill="#eef0f2">
+    <rect x="502" y="394" width="192" height="32" rx="5"/>
+    <rect x="502" y="438" width="92" height="30" rx="5"/>
+    <rect x="604" y="438" width="90" height="30" rx="5"/>
+    <rect x="502" y="512" width="92" height="28" rx="5"/>
+    <rect x="604" y="512" width="90" height="28" rx="5"/>
+    <rect x="1034" y="162" width="122" height="82" rx="4" fill="#647386"/>
+    <rect x="1034" y="256" width="122" height="28" rx="4"/>
+    <rect x="1034" y="296" width="56" height="30" rx="5"/>
+    <rect x="1100" y="296" width="56" height="30" rx="5"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+    <text x="598" y="416" fill="#344055">Leer peso</text>
+    <text x="548" y="458" fill="#344055">Peso bruto</text>
+    <text x="650" y="458" fill="#344055">Peso tara</text>
+    <text x="1095" y="203" fill="#ffffff" font-size="22">--</text>
+    <text x="1130" y="203" fill="#ffffff" font-size="16">kg</text>
+    <text x="1062" y="316" fill="#344055">Borrar</text>
+    <text x="1128" y="316" fill="#344055">Repetir</text>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="700">
+    <rect x="1034" y="338" width="122" height="30" rx="5" fill="#10b6ad"/>
+    <text x="1080" y="358" fill="#ffffff">Sumar</text>
+  </g>
+
+  <g fill="none" stroke="#c3ccd8">
+    <rect x="244" y="598" width="272" height="38" rx="4"/>
+    <rect x="538" y="598" width="272" height="38" rx="4"/>
+    <path d="M1034 612h122" stroke-dasharray="3 3"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="700">
+    <rect x="248" y="644" width="128" height="34" rx="5" fill="#10b6ad"/>
+    <rect x="386" y="644" width="118" height="34" rx="5" fill="#10b6ad"/>
+    <rect x="514" y="644" width="126" height="34" rx="5" fill="#10b6ad"/>
+    <rect x="650" y="644" width="122" height="34" rx="5" fill="#ff830f"/>
+    <rect x="782" y="644" width="112" height="34" rx="5" fill="#ff830f"/>
+    <rect x="904" y="644" width="116" height="34" rx="5" fill="#ef3d3d"/>
+    <rect x="1030" y="644" width="112" height="34" rx="5" fill="#ef3d3d"/>
+    <text x="294" y="666" fill="#ffffff">Peso bruto</text>
+    <text x="424" y="666" fill="#ffffff">Peso tara</text>
+    <text x="564" y="666" fill="#ffffff">Guardar</text>
+    <text x="696" y="666" fill="#ffffff">Modificar</text>
+    <text x="828" y="666" fill="#ffffff">Imprimir</text>
+    <text x="950" y="666" fill="#ffffff">Cancelar</text>
+    <text x="1078" y="666" fill="#ffffff">Cerrar</text>
+  </g>
+</svg>

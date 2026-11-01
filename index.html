@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio personal de Patricio Albornoz, Ingeniero en Informática y Desarrollador Fullstack.">
+  <title>Patricio Albornoz | Desarrollador Fullstack</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark" aria-hidden="true">PA</span>
+      <span>Patricio Albornoz</span>
+    </a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#tecnologias">Tecnologías</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section id="inicio" class="hero section">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Portafolio personal</p>
+          <h1>Patricio Albornoz</h1>
+          <p class="role">Ingeniero en Informática | Desarrollador Fullstack</p>
+          <p class="hero-lead">Diseño y desarrollo soluciones de software que conectan operación, datos y usuarios.</p>
+          <p class="hero-copy">Combino experiencia en sistemas empresariales con proyectos personales para experimentar y crear herramientas útiles.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn-secondary" href="#contacto">Contacto</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-hidden="true">
+          <div class="pixel-frame">
+            <span class="status-dot"></span>
+            <span>Fullstack / Operación / Datos</span>
+          </div>
+          <div class="terminal-card" aria-hidden="true">
+            <p>&gt; build portfolio --static</p>
+            <p>&gt; load projects.json</p>
+            <p>&gt; connect users + data + process</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section projects-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Proyectos</p>
+          <h2>Software que toma forma</h2>
+        </div>
+        <p>Herramientas personales y sistemas profesionales: qué resuelven, cómo participé y con qué tecnologías.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtros de proyectos">
+        <button class="filter-button active" type="button" data-filter="Todos" aria-pressed="true">Todos</button>
+        <button class="filter-button" type="button" data-filter="Hobby" aria-pressed="false">Personales</button>
+        <button class="filter-button" type="button" data-filter="Profesional" aria-pressed="false">Profesionales</button>
+        <button class="filter-button" type="button" data-filter="Juego" aria-pressed="false">Juegos</button>
+        <button class="filter-button" type="button" data-filter="Web" aria-pressed="false">Web</button>
+        <button class="filter-button" type="button" data-filter="Sistema" aria-pressed="false">Sistemas</button>
+        <button class="filter-button" type="button" data-filter="En desarrollo" aria-pressed="false">En desarrollo</button>
+      </div>
+
+      <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+      <p id="projects-empty" class="empty-state" hidden>No hay proyectos para este filtro. Prueba con «Todos».</p>
+    </section>
+
+    <section id="sobre-mi" class="section section-narrow">
+      <p class="eyebrow">Sobre mí</p>
+      <h2>Software práctico para procesos reales</h2>
+      <div class="text-stack">
+        <p>Soy Ingeniero en Informática y Desarrollador Fullstack. He trabajado en sistemas orientados a procesos operativos, integraciones y manejo de datos, principalmente en ambientes empresariales.</p>
+        <p>Además de mi experiencia profesional, desarrollo proyectos personales como forma de aprendizaje continuo, explorando aplicaciones web, juegos, herramientas de productividad y soluciones prácticas.</p>
+        <p>He participado en mejoras de procesos internos, como la implementación de control de versiones en ambiente de cliente y la propuesta de uso de un sistema de tickets basado en osTicket para reemplazar la gestión informal por WhatsApp.</p>
+      </div>
+    </section>
+
+    <section id="tecnologias" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Perfil técnico</p>
+          <h2>Tecnologías y áreas de trabajo</h2>
+        </div>
+        <p>Experiencia combinando frontend, backend, datos, herramientas de control y sistemas integrados.</p>
+      </div>
+      <div class="tech-grid" aria-label="Categorías de tecnologías">
+        <article class="tech-card">
+          <h3>Frontend</h3>
+          <ul class="tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>DataTables</li>
+            <li>html5-qrcode</li>
+          </ul>
+        </article>
+        <article class="tech-card">
+          <h3>Backend</h3>
+          <ul class="tag-list">
+            <li>C#</li>
+            <li>.NET</li>
+            <li>APIs REST</li>
+            <li>Windows Forms</li>
+          </ul>
+        </article>
+        <article class="tech-card">
+          <h3>Datos</h3>
+          <ul class="tag-list">
+            <li>SQL Server</li>
+            <li>Dapper</li>
+            <li>EF Core</li>
+          </ul>
+        </article>
+        <article class="tech-card">
+          <h3>Herramientas</h3>
+          <ul class="tag-list">
+            <li>Git</li>
+            <li>GitLab</li>
+            <li>Azure DevOps</li>
+            <li>Control de versiones</li>
+            <li>Documentación técnica</li>
+          </ul>
+        </article>
+        <article class="tech-card tech-card-wide">
+          <h3>Integraciones</h3>
+          <ul class="tag-list">
+            <li>APIs</li>
+            <li>Servicios corporativos</li>
+            <li>SAP BTP</li>
+            <li>LIQMIN</li>
+            <li>SIGMAS</li>
+            <li>Puerto serie / balanzas</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section section-narrow">
+      <p class="eyebrow">Experiencia profesional</p>
+      <h2>Operación, integraciones y mejora continua</h2>
+      <div class="text-stack">
+        <p>He participado en el desarrollo, mantenimiento y mejora de sistemas orientados a operación, pesaje, integración con APIs, manejo de datos y despliegues en ambientes de cliente.</p>
+        <p>También he apoyado la organización técnica mediante control de versiones, documentación y propuestas de mejora de procesos internos, como la implementación de un sistema de tickets con osTicket.</p>
+        <p>Los proyectos profesionales presentados en este portafolio se describen de forma general para proteger información sensible de clientes y ambientes reales.</p>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Conversemos</h2>
+        </div>
+      </div>
+      <div class="contact-actions">
+        <a class="contact-button" href="mailto:patricio.albornoz05@gmail.com" aria-label="Enviar correo a Patricio Albornoz">
+          <span class="contact-icon" aria-hidden="true">
+            <img src="assets/icons/mail.svg" alt="">
+          </span>
+          Correo
+        </a>
+        <a class="contact-button" href="https://www.linkedin.com/in/patricio-albornoz-rojas-19b582223" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn de Patricio Albornoz">
+          <span class="contact-icon" aria-hidden="true">
+            <img src="assets/icons/linkedin.svg" alt="">
+          </span>
+          LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Patricio Albornoz</p>
+    <p><span id="current-year"></span> - Desarrollado por Patricio Albornoz</p>
+  </footer>
+
+  <script src="js/projects.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

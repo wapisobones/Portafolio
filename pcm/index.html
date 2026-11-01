@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PCM - Plano Corte Madera</title>
+    <link rel="stylesheet" href="assets/styles/main.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">PCM</p>
+        <h1>Plano Corte Madera</h1>
+        <p>Calcula, distribuye y visualiza piezas rectangulares en una plancha.</p>
+      </div>
+      <a class="button button-secondary" href="../index.html#proyectos">Volver al portafolio</a>
+    </header>
+
+    <main class="app-shell">
+      <aside class="side-panel" aria-label="Controles del proyecto">
+        <section class="panel" aria-labelledby="sheetTitle">
+          <div class="panel-heading">
+            <h2 id="sheetTitle">Plancha</h2>
+            <span id="saveStatus" class="save-status">Sin cambios guardados</span>
+          </div>
+
+          <div class="field">
+            <label for="material">Nombre / material</label>
+            <input id="material" type="text" maxlength="60" value="MDF 18mm">
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="sheetWidth">Ancho (mm)</label>
+              <input id="sheetWidth" type="number" min="1" step="1" value="2440">
+            </div>
+            <div class="field">
+              <label for="sheetHeight">Alto (mm)</label>
+              <input id="sheetHeight" type="number" min="1" step="1" value="1220">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="kerf">Espesor de corte (mm)</label>
+            <input id="kerf" type="number" min="0" step="0.1" value="3">
+          </div>
+
+          <div class="field">
+            <label for="sheetGrain">Direccion de veta de la plancha</label>
+            <select id="sheetGrain">
+              <option value="horizontal">Horizontal</option>
+              <option value="vertical">Vertical</option>
+            </select>
+          </div>
+
+          <div id="validationMessages" class="messages" aria-live="polite"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="pieceFormTitle">
+          <div class="panel-heading">
+            <h2 id="pieceFormTitle">Pieza</h2>
+            <button id="cancelEditButton" class="button button-ghost is-hidden" type="button">Cancelar edicion</button>
+          </div>
+
+          <form id="pieceForm" class="piece-form">
+            <input id="pieceId" type="hidden">
+            <div class="field">
+              <label for="pieceName">Nombre opcional</label>
+              <input id="pieceName" type="text" maxlength="40" placeholder="Ej: Lateral">
+            </div>
+
+            <div class="field-grid">
+              <div class="field">
+                <label for="pieceWidth">Ancho (mm)</label>
+                <input id="pieceWidth" type="number" min="1" step="1" placeholder="450">
+              </div>
+              <div class="field">
+                <label for="pieceHeight">Alto (mm)</label>
+                <input id="pieceHeight" type="number" min="1" step="1" placeholder="800">
+              </div>
+            </div>
+
+            <div class="field-grid compact">
+              <div class="field">
+                <label for="pieceQuantity">Cantidad</label>
+                <input id="pieceQuantity" type="number" min="1" step="1" value="1">
+              </div>
+              <label class="check-field">
+                <input id="pieceCanRotate" type="checkbox" checked>
+                <span>Permitir rotacion</span>
+              </label>
+            </div>
+
+            <div class="field">
+              <label for="pieceGrain">Direccion de veta de la pieza</label>
+              <select id="pieceGrain">
+                <option value="indiferente">Indiferente</option>
+                <option value="horizontal">Horizontal</option>
+                <option value="vertical">Vertical</option>
+              </select>
+            </div>
+
+            <button id="submitPieceButton" class="button" type="submit">Agregar pieza</button>
+          </form>
+        </section>
+
+        <section class="panel" aria-labelledby="storageTitle">
+          <h2 id="storageTitle">Proyecto local</h2>
+          <div class="button-row">
+            <button id="saveProjectButton" class="button" type="button">Guardar proyecto</button>
+            <button id="loadProjectButton" class="button button-secondary" type="button">Cargar ultimo</button>
+            <button id="clearProjectButton" class="button button-danger" type="button">Limpiar proyecto</button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="main-panel" aria-label="Plano y resultados">
+        <section class="summary-grid" id="summaryCards" aria-live="polite"></section>
+
+        <section class="panel board-panel" aria-labelledby="boardTitle">
+          <div class="panel-heading">
+            <div>
+              <h2 id="boardTitle">Plano visual</h2>
+              <p id="boardSubtitle">Agrega piezas para calcular la distribucion.</p>
+            </div>
+            <div class="toolbar-actions">
+              <button id="calculateButton" class="button" type="button">Calcular distribucion</button>
+              <button id="exportPdfButton" class="button button-secondary" type="button">Exportar PDF</button>
+            </div>
+          </div>
+          <div id="boardCanvas" class="board-canvas" aria-live="polite">
+            <p class="empty-state">El plano aparecera aqui despues de calcular.</p>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="piecesTitle">
+          <div class="panel-heading">
+            <h2 id="piecesTitle">Listado editable de piezas</h2>
+            <button id="clearPiecesButton" class="button button-danger" type="button">Limpiar lista</button>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Ancho</th>
+                  <th>Alto</th>
+                  <th>Cant.</th>
+                  <th>Rotacion</th>
+                  <th>Veta</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="piecesTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="unplacedPanel" class="panel warning-panel is-hidden" aria-labelledby="unplacedTitle">
+          <h2 id="unplacedTitle">Piezas no ubicadas</h2>
+          <p>Algunas piezas no caben en la plancha con la configuracion actual.</p>
+          <ul id="unplacedList"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/storage.js"></script>
+    <script src="js/validations.js"></script>
+    <script src="js/pieces.js"></script>
+    <script src="js/cuttingAlgorithm.js"></script>
+    <script src="js/renderBoard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/pdfExport.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

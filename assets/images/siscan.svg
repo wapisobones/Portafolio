@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Preview SISCAN</title>
+  <desc id="desc">Vista previa sanitizada de un dashboard operativo con graficos y tabla.</desc>
+  <defs>
+    <linearGradient id="topbar" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#10b6ad"/>
+      <stop offset="1" stop-color="#079a94"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#263241"/>
+      <stop offset="1" stop-color="#0f1e2c"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#15202c" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="#f6f8fb"/>
+  <rect x="0" y="0" width="68" height="675" fill="url(#side)"/>
+  <rect x="68" y="0" width="1132" height="58" fill="url(#topbar)"/>
+  <rect x="0" y="0" width="68" height="58" fill="#1d2937"/>
+
+  <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".92">
+    <path d="M25 24h20M25 33h20M25 42h20"/>
+    <circle cx="1058" cy="30" r="10"/>
+    <path d="M1049 46c3-8 15-8 18 0"/>
+    <path d="M1108 24v16M1100 40h16M1103 47h10"/>
+    <path d="M1154 21v22M1154 21h12M1154 43h12M1162 32h14"/>
+  </g>
+
+  <text x="96" y="38" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="700">Dashboard</text>
+
+  <g fill="none" stroke="#eaf0f7" stroke-width="3" stroke-linecap="round" opacity=".92">
+    <path d="M25 102l10-10 10 10v18H25z"/>
+    <path d="M25 174v26M35 160v40M45 184v16"/>
+    <path d="M25 262a20 20 0 0 0 20-20H25z"/>
+    <rect x="24" y="306" width="22" height="28" rx="2"/>
+    <path d="M29 314h12M29 322h12"/>
+    <rect x="24" y="390" width="22" height="22" rx="2"/>
+    <path d="M24 400h22M34 390v22"/>
+    <path d="M24 486h22v18H24zM28 486l4-8h6l4 8"/>
+    <path d="M24 574c3-9 19-9 22 0M35 552a7 7 0 1 0 0 14a7 7 0 0 0 0-14"/>
+    <path d="M35 628l4 8l9 1l-6 7l2 9l-9-4l-9 4l2-9l-6-7l9-1z"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="92" y="82" width="538" height="258" rx="7" fill="#ffffff" stroke="#dce3eb"/>
+    <rect x="642" y="82" width="536" height="258" rx="7" fill="#ffffff" stroke="#dce3eb"/>
+    <rect x="92" y="354" width="1086" height="272" rx="7" fill="#ffffff" stroke="#dce3eb"/>
+  </g>
+
+  <text x="116" y="118" fill="#172033" font-family="Arial, sans-serif" font-size="18" font-weight="700">Pesos y Cantidades por Producto</text>
+  <text x="668" y="118" fill="#172033" font-family="Arial, sans-serif" font-size="18" font-weight="700">Peso Chancado por Producto y Mes</text>
+  <text x="116" y="390" fill="#172033" font-family="Arial, sans-serif" font-size="18" font-weight="700">Promedio de dias en modulos</text>
+
+  <g font-family="Arial, sans-serif" font-size="13" fill="#27364a">
+    <rect x="182" y="148" width="24" height="12" fill="#2579c8"/>
+    <text x="214" y="159">Peso Total</text>
+    <rect x="294" y="148" width="24" height="12" fill="#9454b7"/>
+    <text x="326" y="159">Peso Pres.</text>
+    <rect x="404" y="148" width="24" height="12" fill="#ec7d22"/>
+    <text x="436" y="159">Peso Cerrado</text>
+  </g>
+
+  <g stroke="#d5dce5" stroke-dasharray="3 3">
+    <path d="M182 192h420M182 232h420M182 272h420M182 312h420"/>
+    <path d="M724 192h420M724 232h420M724 272h420M724 312h420"/>
+    <path d="M827 192v120M930 192v120M1036 192v120"/>
+  </g>
+  <g stroke="#aeb9c6" stroke-width="1.2">
+    <path d="M182 182v130h420"/>
+    <path d="M724 182v130h420"/>
+  </g>
+
+  <g>
+    <rect x="226" y="306" width="28" height="6" rx="2" fill="#2579c8"/>
+    <rect x="266" y="306" width="28" height="6" rx="2" fill="#9454b7"/>
+    <rect x="306" y="305" width="28" height="7" rx="2" fill="#ec7d22"/>
+    <rect x="360" y="202" width="28" height="110" rx="3" fill="#2579c8"/>
+    <rect x="400" y="232" width="28" height="80" rx="3" fill="#9454b7"/>
+    <rect x="440" y="202" width="28" height="110" rx="3" fill="#ec7d22"/>
+    <rect x="514" y="309" width="28" height="3" rx="2" fill="#2579c8"/>
+    <rect x="554" y="309" width="28" height="3" rx="2" fill="#9454b7"/>
+    <rect x="594" y="309" width="28" height="3" rx="2" fill="#ec7d22"/>
+  </g>
+
+  <g fill="#27364a" font-family="Arial, sans-serif" font-size="13">
+    <text x="214" y="335">Producto A</text>
+    <text x="368" y="335">Producto B</text>
+    <text x="522" y="335">Producto C</text>
+    <text x="724" y="335">2025-01</text>
+    <text x="828" y="335">2025-02</text>
+    <text x="932" y="335">2025-03</text>
+    <text x="1036" y="335">2025-04</text>
+  </g>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M724 306L827 206L930 306L1036 194L1144 306" stroke="#2478c9" stroke-width="3"/>
+    <path d="M724 306L827 297L930 306L1036 301L1144 306" stroke="#f4b000" stroke-width="3"/>
+  </g>
+  <g>
+    <circle cx="724" cy="306" r="6" fill="#2478c9"/>
+    <circle cx="827" cy="206" r="6" fill="#2478c9"/>
+    <circle cx="930" cy="306" r="6" fill="#2478c9"/>
+    <circle cx="1036" cy="194" r="6" fill="#2478c9"/>
+    <circle cx="1144" cy="306" r="6" fill="#2478c9"/>
+    <circle cx="724" cy="306" r="5" fill="#f4b000"/>
+    <circle cx="827" cy="297" r="5" fill="#f4b000"/>
+    <circle cx="930" cy="306" r="5" fill="#f4b000"/>
+    <circle cx="1036" cy="301" r="5" fill="#f4b000"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="13">
+    <circle cx="752" cy="152" r="5" fill="#2478c9"/>
+    <text x="766" y="157" fill="#27364a">Producto B - Lixiviacion</text>
+    <circle cx="946" cy="152" r="5" fill="#f4b000"/>
+    <text x="960" y="157" fill="#27364a">Producto A - Concentracion</text>
+  </g>
+
+  <rect x="116" y="414" width="1038" height="38" rx="4" fill="#f4f6f8" stroke="#dce3eb"/>
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#172033">
+    <text x="138" y="438">Producto</text>
+    <text x="496" y="438">Dias en Recepcion</text>
+    <text x="738" y="438">Dias en Levante</text>
+    <text x="968" y="438">Dias en Chancado</text>
+  </g>
+  <g stroke="#e3e8ef">
+    <path d="M116 486h1038M116 520h1038M116 554h1038M116 588h1038"/>
+    <path d="M434 414v196M668 414v196M906 414v196"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#27364a">
+    <circle cx="140" cy="470" r="10" fill="#09a89f"/>
+    <circle cx="140" cy="504" r="10" fill="#2583d4"/>
+    <circle cx="140" cy="538" r="10" fill="#f5b400"/>
+    <circle cx="140" cy="572" r="10" fill="#2583d4"/>
+    <text x="164" y="475">Producto C</text>
+    <text x="164" y="509">Producto B</text>
+    <text x="164" y="543">Producto A</text>
+    <text x="164" y="577">Producto B</text>
+    <text x="548" y="475">0</text>
+    <text x="548" y="509">3</text>
+    <text x="548" y="543">3</text>
+    <text x="548" y="577">1</text>
+    <text x="782" y="475">0</text>
+    <text x="782" y="509">0</text>
+    <text x="782" y="543">2</text>
+    <text x="782" y="577">1</text>
+    <text x="1016" y="475">0</text>
+    <text x="1016" y="509">1</text>
+    <text x="1016" y="543">2</text>
+    <text x="1016" y="577">0</text>
+  </g>
+</svg>
