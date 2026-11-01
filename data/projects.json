@@ -2,7 +2,7 @@
   {
     "id": "canchatrack",
     "nombre": "CanchaTrack",
-    "descripcion": "MVP fullstack para monitoreo operaci?nal de lotes de mineral en cancha, con importación CSV, reglas de monitoreo, alertas e historial por lote.",
+    "descripcion": "MVP fullstack para monitoreo operacional de lotes de mineral en cancha, con importación CSV, reglas de monitoreo, alertas e historial por lote.",
     "estado": "En desarrollo",
     "tipo": "Hobby",
     "categorias": [
@@ -29,7 +29,7 @@
     "confidencial": false,
     "notaConfidencialidad": "",
     "rol": "Diseño y desarrollo fullstack del MVP",
-    "imagenAlt": "Dashboard operacional de CanchaTrack con resumen de lotes y ?ltimas alertas",
+    "imagenAlt": "Dashboard operacional de CanchaTrack con resumen de lotes y últimas alertas",
     "verImagen": true,
     "tecnologiasPrincipales": [
       "ASP.NET Core Web API",
@@ -64,7 +64,7 @@
   {
     "id": "pcm",
     "nombre": "PCM - Plano Corte Madera",
-    "descripcion": "Aplicaci?n para dimensionar cortes en planchas de madera y calcular p?rdida por corte.",
+    "descripcion": "Aplicación para dimensionar cortes en planchas de madera y calcular pérdida por corte.",
     "estado": "En desarrollo",
     "tipo": "Hobby",
     "categorias": [
@@ -87,8 +87,8 @@
   },
   {
     "id": "sipa",
-    "nombre": "SIPA - Sistema Integrado de Pesaje y Atenci?n",
-    "descripcion": "Sistema profesional para operaci?n de pesajes e integraci?n con servicios corporativos.",
+    "nombre": "SIPA - Sistema Integrado de Pesaje y Atención",
+    "descripcion": "Sistema profesional para operación de pesajes e integración con servicios corporativos.",
     "estado": "Profesional",
     "tipo": "Profesional",
     "categorias": [
@@ -109,7 +109,7 @@
     "codigoUrl": "privado",
     "confidencial": true,
     "notaConfidencialidad": "Proyecto profesional descrito de forma general por confidencialidad del cliente.",
-    "rol": "Desarrollo, integraci?n, soporte t?cnico y participaci?n en mejoras del sistema",
+    "rol": "Desarrollo, integración, soporte técnico y participación en mejoras del sistema",
     "tecnologiasPrincipales": [
       ".NET 8",
       "Windows Forms",

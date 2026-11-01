@@ -737,6 +737,10 @@ h3 {
     flex-direction: column;
   }
 
+  .project-title {
+    flex: initial;
+  }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
