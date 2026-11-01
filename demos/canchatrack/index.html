@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demostración estática de CanchaTrack con datos ficticios de lotes de mineral.">
+  <meta name="theme-color" content="#0b1020">
+  <title>CanchaTrack | Demostración estática</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/views.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="demo-banner">Demostración estática con datos ficticios</div>
+  <header class="app-header">
+    <a class="brand" href="#dashboard">
+      <span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>CanchaTrack <span class="brand-version">Demo interactiva</span></span>
+    </a>
+    <a class="return-link" href="../../index.html#proyectos">Volver al portafolio</a>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <nav class="app-nav" aria-label="Vistas de la demostración">
+        <a href="#dashboard" aria-current="page">Dashboard</a>
+        <a href="#lotes">Lotes</a>
+        <a href="#alertas">Alertas</a>
+        <a href="#cancha">Cancha visual</a>
+        <a href="#reglas">Reglas</a>
+      </nav>
+      <div class="scope-note">
+        <p>Una muestra del proyecto</p>
+        <p>La aplicación original utiliza React, TypeScript, ASP.NET Core, EF Core y SQL Server.</p>
+        <p>Esta demo independiente utiliza HTML, CSS y JavaScript. Los registros simulados solo existen en memoria.</p>
+      </div>
+    </aside>
+    <main id="contenido" class="workspace" tabindex="-1">
+      <div class="load-notice">
+        <p id="data-status" role="status" aria-live="polite">Cargando datos ficticios…</p>
+        <button id="retry-load" type="button" hidden>Reintentar carga</button>
+      </div>
+      <details id="reset-panel" class="ct4-reset" hidden>
+        <summary>Restablecer datos ficticios originales</summary>
+        <p>Se eliminarán las mediciones y alertas simuladas de esta sesión. El archivo JSON permanece intacto.</p>
+        <button id="reset-data" type="button" disabled>Confirmar restablecimiento</button>
+      </details>
+      <div id="view-content" aria-busy="true">
+        <h1 tabindex="-1">Preparando la demostración</h1>
+        <p>El conjunto local se está cargando.</p>
+      </div>
+      <noscript><p class="message-panel">Activa JavaScript para cargar los datos ficticios y recorrer las vistas.</p></noscript>
+    </main>
+  </div>
+  <footer class="app-footer">
+    <span>CanchaTrack · simulación local</span>
+    <span>Sin conexión a sistemas operacionales</span>
+  </footer>
+</body>
+</html>

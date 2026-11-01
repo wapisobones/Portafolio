@@ -2,7 +2,7 @@
   {
     "id": "canchatrack",
     "nombre": "CanchaTrack",
-    "descripcion": "MVP fullstack para monitoreo operacional de lotes de mineral en cancha, con importación CSV, reglas de monitoreo, alertas e historial por lote.",
+    "descripcion": "MVP fullstack para monitoreo operacional de lotes de mineral en cancha, con importación CSV, reglas de monitoreo, alertas e historial por lote. Demo estática independiente con datos ficticios.",
     "estado": "En desarrollo",
     "tipo": "Hobby",
     "categorias": [
@@ -23,8 +23,9 @@
       "Axios",
       "Swagger"
     ],
-    "imagen": "assets/images/dashboard_canchaTrack.png",
-    "demoUrl": "",
+    "imagen": "assets/images/canchatrack-demo.png",
+    "demoUrl": "demos/canchatrack/",
+    "demoTexto": "Explorar demo",
     "codigoUrl": "",
     "confidencial": false,
     "notaConfidencialidad": "",

@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "fictional": true,
+    "scenarioDate": "2026-04-12",
+    "description": "Conjunto completamente inventado. Los umbrales no representan criterios operacionales reales."
+  },
+  "clients": [
+    {
+      "id": "DEMO-CLI-A",
+      "name": "Cliente ficticio A"
+    },
+    {
+      "id": "DEMO-CLI-B",
+      "name": "Cliente ficticio B"
+    }
+  ],
+  "locations": [
+    {
+      "id": "DEMO-UBI-1",
+      "label": "Sector A / posición 1",
+      "row": 1,
+      "column": 1
+    },
+    {
+      "id": "DEMO-UBI-2",
+      "label": "Sector A / posición 2",
+      "row": 1,
+      "column": 2
+    },
+    {
+      "id": "DEMO-UBI-3",
+      "label": "Sector A / posición 3",
+      "row": 1,
+      "column": 3
+    },
+    {
+      "id": "DEMO-UBI-4",
+      "label": "Sector A / posición 4",
+      "row": 1,
+      "column": 4
+    },
+    {
+      "id": "DEMO-UBI-5",
+      "label": "Sector B / posición 1",
+      "row": 2,
+      "column": 1
+    },
+    {
+      "id": "DEMO-UBI-6",
+      "label": "Sector B / posición 2",
+      "row": 2,
+      "column": 2
+    },
+    {
+      "id": "DEMO-UBI-7",
+      "label": "Sector B / posición 3",
+      "row": 2,
+      "column": 3
+    },
+    {
+      "id": "DEMO-UBI-8",
+      "label": "Sector B / posición 4",
+      "row": 2,
+      "column": 4
+    }
+  ],
+  "lots": [
+    {
+      "id": "DEMO-LOT-001",
+      "label": "Lote 01",
+      "clientId": "DEMO-CLI-A",
+      "locationId": "DEMO-UBI-1",
+      "material": "Mineral de muestra ficticio"
+    },
+    {
+      "id": "DEMO-LOT-002",
+      "label": "Lote 02",
+      "clientId": "DEMO-CLI-A",
+      "locationId": "DEMO-UBI-2",
+      "material": "Mineral de muestra ficticio"
+    },
+    {
+      "id": "DEMO-LOT-003",
+      "label": "Lote 03",
+      "clientId": "DEMO-CLI-A",
+      "locationId": "DEMO-UBI-3",
+      "material": "Mineral de muestra ficticio"
+    },
+    {
+      "id": "DEMO-LOT-004",
+      "label": "Lote 04",
+      "clientId": "DEMO-CLI-A",
+      "locationId": "DEMO-UBI-4",
+      "material": "Mineral de muestra ficticio"
+    },
+    {
+      "id": "DEMO-LOT-005",
+      "label": "Lote 05",
+      "clientId": "DEMO-CLI-B",
+      "locationId": "DEMO-UBI-5",
+      "material": "Mineral de muestra ficticio"
+    },
+    {
+      "id": "DEMO-LOT-006",
+      "label": "Lote 06",
+      "clientId": "DEMO-CLI-B",
+      "locationId": "DEMO-UBI-6",
+      "material": "Mineral de muestra ficticio"
+    },
+    {
+      "id": "DEMO-LOT-007",
+      "label": "Lote 07",
+      "clientId": "DEMO-CLI-B",
+      "locationId": "DEMO-UBI-7",
+      "material": "Mineral de muestra ficticio"
+    },
+    {
+      "id": "DEMO-LOT-008",
+      "label": "Lote 08",
+      "clientId": "DEMO-CLI-B",
+      "locationId": "DEMO-UBI-8",
+      "material": "Mineral de muestra ficticio"
+    }
+  ],
+  "rules": [
+    {
+      "id": "DEMO-REG-H-1",
+      "clientId": "DEMO-CLI-A",
+      "name": "Umbral ficticio de humedad",
+      "metric": "humidityPercent",
+      "operator": ">",
+      "threshold": 9,
+      "unit": "%",
+      "illustrative": true
+    },
+    {
+      "id": "DEMO-REG-T-1",
+      "clientId": "DEMO-CLI-A",
+      "name": "Antigüedad ficticia de medición",
+      "metric": "measurementAgeHours",
+      "operator": ">",
+      "threshold": 24,
+      "unit": "h",
+      "illustrative": true
+    },
+    {
+      "id": "DEMO-REG-H-2",
+      "clientId": "DEMO-CLI-B",
+      "name": "Umbral ficticio de humedad",
+      "metric": "humidityPercent",
+      "operator": ">",
+      "threshold": 11,
+      "unit": "%",
+      "illustrative": true
+    },
+    {
+      "id": "DEMO-REG-T-2",
+      "clientId": "DEMO-CLI-B",
+      "name": "Antigüedad ficticia de medición",
+      "metric": "measurementAgeHours",
+      "operator": ">",
+      "threshold": 24,
+      "unit": "h",
+      "illustrative": true
+    }
+  ],
+  "measurements": [
+    {
+      "id": "DEMO-MED-1-1",
+      "lotId": "DEMO-LOT-001",
+      "recordedAt": "2026-04-12T10:00:00Z",
+      "humidityPercent": 6.6
+    },
+    {
+      "id": "DEMO-MED-1-2",
+      "lotId": "DEMO-LOT-001",
+      "recordedAt": "2026-04-12T14:00:00Z",
+      "humidityPercent": 7.2
+    },
+    {
+      "id": "DEMO-MED-2-1",
+      "lotId": "DEMO-LOT-002",
+      "recordedAt": "2026-04-12T10:00:00Z",
+      "humidityPercent": 9.5
+    },
+    {
+      "id": "DEMO-MED-2-2",
+      "lotId": "DEMO-LOT-002",
+      "recordedAt": "2026-04-12T14:00:00Z",
+      "humidityPercent": 10.1
+    },
+    {
+      "id": "DEMO-MED-3-1",
+      "lotId": "DEMO-LOT-003",
+      "recordedAt": "2026-04-12T10:00:00Z",
+      "humidityPercent": 7.8
+    },
+    {
+      "id": "DEMO-MED-3-2",
+      "lotId": "DEMO-LOT-003",
+      "recordedAt": "2026-04-12T14:00:00Z",
+      "humidityPercent": 8.4
+    },
+    {
+      "id": "DEMO-MED-4-1",
+      "lotId": "DEMO-LOT-004",
+      "recordedAt": "2026-04-12T10:00:00Z",
+      "humidityPercent": 9.2
+    },
+    {
+      "id": "DEMO-MED-4-2",
+      "lotId": "DEMO-LOT-004",
+      "recordedAt": "2026-04-12T14:00:00Z",
+      "humidityPercent": 9.8
+    },
+    {
+      "id": "DEMO-MED-5-1",
+      "lotId": "DEMO-LOT-005",
+      "recordedAt": "2026-04-12T10:00:00Z",
+      "humidityPercent": 8.9
+    },
+    {
+      "id": "DEMO-MED-5-2",
+      "lotId": "DEMO-LOT-005",
+      "recordedAt": "2026-04-12T14:00:00Z",
+      "humidityPercent": 9.5
+    },
+    {
+      "id": "DEMO-MED-6-1",
+      "lotId": "DEMO-LOT-006",
+      "recordedAt": "2026-04-12T10:00:00Z",
+      "humidityPercent": 11.2
+    },
+    {
+      "id": "DEMO-MED-6-2",
+      "lotId": "DEMO-LOT-006",
+      "recordedAt": "2026-04-12T14:00:00Z",
+      "humidityPercent": 11.8
+    },
+    {
+      "id": "DEMO-MED-7-1",
+      "lotId": "DEMO-LOT-007",
+      "recordedAt": "2026-04-12T10:00:00Z",
+      "humidityPercent": 9.6
+    },
+    {
+      "id": "DEMO-MED-7-2",
+      "lotId": "DEMO-LOT-007",
+      "recordedAt": "2026-04-12T14:00:00Z",
+      "humidityPercent": 10.2
+    },
+    {
+      "id": "DEMO-MED-8-1",
+      "lotId": "DEMO-LOT-008",
+      "recordedAt": "2026-04-12T10:00:00Z",
+      "humidityPercent": 11.6
+    },
+    {
+      "id": "DEMO-MED-8-2",
+      "lotId": "DEMO-LOT-008",
+      "recordedAt": "2026-04-12T14:00:00Z",
+      "humidityPercent": 12.2
+    }
+  ],
+  "alerts": [
+    {
+      "id": "DEMO-ALE-1",
+      "lotId": "DEMO-LOT-002",
+      "ruleId": "DEMO-REG-H-1",
+      "measurementId": "DEMO-MED-2-2",
+      "createdAt": "2026-04-12T14:05:00Z",
+      "severity": "Atención",
+      "status": "Abierta",
+      "message": "La medición de ejemplo supera el umbral ficticio de humedad."
+    },
+    {
+      "id": "DEMO-ALE-2",
+      "lotId": "DEMO-LOT-004",
+      "ruleId": "DEMO-REG-H-1",
+      "measurementId": "DEMO-MED-4-2",
+      "createdAt": "2026-04-12T14:05:00Z",
+      "severity": "Atención",
+      "status": "Abierta",
+      "message": "La medición de ejemplo supera el umbral ficticio de humedad."
+    },
+    {
+      "id": "DEMO-ALE-3",
+      "lotId": "DEMO-LOT-006",
+      "ruleId": "DEMO-REG-H-2",
+      "measurementId": "DEMO-MED-6-2",
+      "createdAt": "2026-04-12T14:05:00Z",
+      "severity": "Atención",
+      "status": "Abierta",
+      "message": "La medición de ejemplo supera el umbral ficticio de humedad."
+    },
+    {
+      "id": "DEMO-ALE-4",
+      "lotId": "DEMO-LOT-008",
+      "ruleId": "DEMO-REG-H-2",
+      "measurementId": "DEMO-MED-8-2",
+      "createdAt": "2026-04-12T14:05:00Z",
+      "severity": "Atención",
+      "status": "Abierta",
+      "message": "La medición de ejemplo supera el umbral ficticio de humedad."
+    }
+  ]
+}

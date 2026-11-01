@@ -78,9 +78,31 @@ Editar `data/projects.json` y agregar un objeto con esta estructura:
 Reglas importantes:
 
 - `demoUrl`: si esta vacio, no se muestra el boton "Ver proyecto".
+- `demoTexto`: personaliza el texto de la acción; si falta, se usa "Ver proyecto".
 - `codigoUrl`: si esta vacio o contiene `privado`, no se muestra el boton "Ver codigo".
 - `imagen`: si esta vacio o falla la carga, se muestra un placeholder visual.
 - `categorias`, `tipo` y `estado` se usan para los filtros.
+
+## Demo de CanchaTrack
+
+La tarjeta conserva la descripción del proyecto fullstack, su estado, aporte y
+tecnologías originales. La aclaración final distingue la demo estática independiente,
+que utiliza exclusivamente datos ficticios.
+
+La acción **Explorar demo** usa los campos existentes `demoUrl` y `demoTexto`.
+Su destino es `demos/canchatrack/`, relativo al portafolio, compatible con una
+publicación de GitHub Pages bajo el nombre del repositorio. Desde la demo se
+puede volver a `../../index.html#proyectos`.
+
+Para recorrerla localmente, iniciar el servidor indicado arriba y abrir
+http://localhost:5500/demos/canchatrack/. El funcionamiento se documenta en
+[demos/canchatrack/README.md](demos/canchatrack/README.md).
+
+**Portada provisional, revisión pendiente antes de publicar:** se conserva
+`assets/images/dashboard_canchaTrack.png`. No se ha generado una captura nueva
+de la demo ni se ha verificado que la imagen actual carezca de información real.
+No debe considerarse anonimizada ni aprobada para publicación. Revisar su
+contenido o reemplazarla por una captura comprobada de la demo con datos ficticios.
 
 ## Como modificar datos de contacto
 
