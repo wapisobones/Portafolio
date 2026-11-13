@@ -83,6 +83,23 @@ Reglas importantes:
 - `imagen`: si esta vacio o falla la carga, se muestra un placeholder visual.
 - `categorias`, `tipo` y `estado` se usan para los filtros.
 
+## Demo de FitTracker
+
+FitTracker aparece primero en `data/projects.json`, junto a CanchaTrack y
+JobFinder AI. La tarjeta reutiliza el renderizador existente: categoría Personal
+(`tipo: "Hobby"`), estado **Beta funcional**, descripción, aporte y las cinco
+tecnologías principales. Aparece en los filtros Todos, Personales y Web.
+
+La única acción es **Ver demo**, dirigida a https://wapisobones.github.io/FitTracker/.
+Se omite `codigoUrl` y se conserva `verImagen: false` para no añadir otros enlaces.
+
+**Captura definitiva:** `assets/images/fittracker-demo.webp` es una captura real
+del Dashboard de la aplicación pública en modo demostración, con datos ficticios
+identificados por la propia interfaz. Incluye estadísticas, gráfico de evolución
+y mapa muscular. Se conserva su proporción y se describe mediante `imagenAlt`.
+Para reemplazarla, guardar una nueva captura auténtica optimizada en esa ruta
+y actualizar el texto alternativo si cambia la vista.
+
 ## Demo de CanchaTrack
 
 La tarjeta conserva la descripción del proyecto fullstack, su estado, aporte y

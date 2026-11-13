@@ -1,5 +1,38 @@
 [
   {
+    "id": "fittracker",
+    "nombre": "FitTracker",
+    "descripcion": "Gestión y seguimiento de entrenamientos. Aplicación web responsive que permite crear rutinas personalizadas, registrar entrenamientos y analizar el progreso físico mediante estadísticas, gráficos y mapas musculares interactivos.",
+    "estado": "Beta funcional",
+    "tipo": "Hobby",
+    "categorias": [
+      "Web",
+      "Herramienta",
+      "Hobby"
+    ],
+    "tecnologias": [
+      "JavaScript (ES Modules)",
+      "HTML5",
+      "CSS3",
+      "Vite",
+      "IndexedDB"
+    ],
+    "tecnologiasPrincipales": [
+      "JavaScript (ES Modules)",
+      "HTML5",
+      "CSS3",
+      "Vite",
+      "IndexedDB"
+    ],
+    "imagen": "assets/images/fittracker-demo.webp",
+    "imagenAlt": "Dashboard de FitTracker en modo demostración con estadísticas de entrenamiento, gráfico de evolución y mapa muscular; datos ficticios.",
+    "demoUrl": "https://wapisobones.github.io/FitTracker/",
+    "demoTexto": "Ver demo",
+    "confidencial": false,
+    "rol": "Diseño y desarrollo integral de una aplicación web con arquitectura modular en JavaScript, persistencia local mediante IndexedDB y visualización interactiva de datos. Implementación del catálogo de ejercicios, generador de rutinas, seguimiento de sesiones y herramientas de análisis del progreso.",
+    "verImagen": false
+  },
+  {
     "id": "canchatrack",
     "nombre": "CanchaTrack",
     "descripcion": "MVP fullstack para monitoreo operacional de lotes de mineral en cancha, con importación CSV, reglas de monitoreo, alertas e historial por lote. Demo estática independiente con datos ficticios.",
