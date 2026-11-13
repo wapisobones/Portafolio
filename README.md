@@ -82,12 +82,13 @@ Reglas importantes:
 - `codigoUrl`: si esta vacio o contiene `privado`, no se muestra el boton "Ver codigo".
 - `imagen`: si esta vacio o falla la carga, se muestra un placeholder visual.
 - `categorias`, `tipo` y `estado` se usan para los filtros.
+- `rol`: conserva el aporte original como información del catálogo; no se muestra en las tarjetas.
 
 ## Demo de FitTracker
 
 FitTracker aparece primero en `data/projects.json`, junto a CanchaTrack y
 JobFinder AI. La tarjeta reutiliza el renderizador existente: categoría Personal
-(`tipo: "Hobby"`), estado **Beta funcional**, descripción, aporte y las cinco
+(`tipo: "Hobby"`), estado **Beta funcional**, descripción y las cinco
 tecnologías principales. Aparece en los filtros Todos, Personales y Web.
 
 La única acción es **Ver demo**, dirigida a https://wapisobones.github.io/FitTracker/.
@@ -102,7 +103,7 @@ y actualizar el texto alternativo si cambia la vista.
 
 ## Demo de CanchaTrack
 
-La tarjeta conserva la descripción del proyecto fullstack, su estado, aporte y
+La tarjeta conserva la descripción del proyecto fullstack, su estado y
 tecnologías originales. La aclaración final distingue la demo estática independiente,
 que utiliza exclusivamente datos ficticios.
 
@@ -122,7 +123,8 @@ La captura antigua fue eliminada.
 ## Demo de JobFinder AI
 
 La ficha presenta el MVP original fullstack: React, TypeScript, ASP.NET Core 10,
-EF Core y SQL Server, con aporte de diseño y desarrollo fullstack. La descripción
+EF Core y SQL Server. El aporte de diseño y desarrollo fullstack se conserva en
+el catálogo sin mostrarse en la tarjeta. La descripción
 distingue la demostración estática interactiva independiente, que usa únicamente
 datos ficticios y compatibilidades ilustrativas precargadas; no ejecuta IA.
 

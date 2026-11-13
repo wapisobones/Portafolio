@@ -66,7 +66,6 @@ const Projects = (() => {
           </div>
           <ul class="project-tags" aria-label="Categorías">${renderTags(categories, "project-tag")}</ul>
           <p class="project-description">${escapeHtml(project.descripcion)}</p>
-          <p class="project-role"><strong>Mi aporte:</strong> ${escapeHtml(project.rol)}</p>
           <ul class="project-techs" aria-label="Tecnologías principales">${renderTags(technologies, "project-tech")}</ul>
           ${confidentiality}
           ${demoButton || codeButton || imageButton ? `<div class="project-actions">${demoButton}${codeButton}${imageButton}</div>` : ""}

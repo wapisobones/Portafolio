@@ -240,7 +240,6 @@ h3 {
 .section-heading > p,
 .text-stack p,
 .project-description,
-.project-role,
 .confidential-note {
   color: var(--muted);
 }
@@ -548,7 +547,6 @@ h3 {
 }
 
 .project-description,
-.project-role,
 .confidential-note {
   margin: 0;
 }
@@ -568,17 +566,6 @@ h3 {
   background: rgba(199, 211, 231, 0.08);
   color: var(--muted-strong);
   font-size: 0.85rem;
-}
-
-.project-role {
-  padding-left: 0.85rem;
-  border-left: 2px solid var(--line);
-  font-size: 0.95rem;
-}
-
-.project-role strong {
-  color: var(--text);
-  font-weight: 600;
 }
 
 .project-actions {
